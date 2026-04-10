@@ -35,13 +35,13 @@ export default function Navbar() {
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="group relative text-[18px] leading-[150%] font-normal hover:font-bold text-[#1E1E1E] hover:text-[#ED3C6A] transition-colors duration-200"
+                className="group relative text-[18px] leading-[150%] font-normal hover:font-bold text-[#1E1E1E] hover:text-[#ED3C6A] transition-colors duration-500"
               >
                 <span className="relative flex flex-col items-center">
                   <span className="invisible font-bold">{link.label}</span>
                   <span className="absolute inset-0 flex items-center justify-center">
                     {link.label}
-                    <span className="absolute left-0 -bottom-1.75 w-full h-px bg-[#ED3C6A] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    <span className="absolute left-0 -bottom-1.75 w-full h-px bg-[#ED3C6A] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </span>
                 </span>
               </Link>

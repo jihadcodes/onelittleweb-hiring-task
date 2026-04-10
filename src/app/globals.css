@@ -5,3 +5,21 @@
   --font-manrope: var(--font-manrope-font);
   --font-jakarta: var(--font-jakarta-font);
 }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes counter-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 50s linear infinite;
+}
+
+/* .animate-counter-spin {
+  animation: counter-spin 50s linear infinite;
+} */
