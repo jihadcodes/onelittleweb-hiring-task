@@ -8,8 +8,6 @@ import Button from "../ui/Button";
 import Image from "next/image";
 
 export default function Navbar() {
-
-  
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -17,11 +15,11 @@ export default function Navbar() {
       <nav className="max-w-310.25 mx-auto px-6 flex items-center justify-between h-22.25">
         {/* Logo */}
         <Link href="/">
-           <Image src="/images/Nav_logo/google.png" alt="Google" width={125} height={45} priority />
+          <Image src="/images/Nav_logo/google.png" alt="Google" width={125} height={45} priority />
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8" role="list">
+        <ul className="hidden lg:flex items-center gap-8" role="list">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <Link
@@ -41,15 +39,15 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <div className="hidden md:flex items-center ">
-          <Button href="#contact" showArrow className="gap-2.5">
+        <div className="hidden lg:flex items-center">
+          <Button href="#contact" showArrow className="gap-2.5 whitespace-nowrap">
             Schedule A Meeting
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 rounded-[5px] hover:bg-gray-50 transition-colors"
+          className="lg:hidden p-2 rounded-[5px] hover:bg-gray-50 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
@@ -59,7 +57,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-5 flex flex-col gap-4">
+        <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-5 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
