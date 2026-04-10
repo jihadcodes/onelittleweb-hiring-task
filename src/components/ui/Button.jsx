@@ -17,12 +17,12 @@ export default function Button({
   type = "button",
   disabled = false,
 }) {
-  const classes = `inline-flex items-center gap-2 text-sm font-bold py-[18px] pl-[22px] pr-[20.5px] rounded-md transition-colors duration-200 cursor-pointer ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2  text-sm font-bold py-[18px] pl-[22px] pr-[20.5px] rounded-md transition-colors duration-200 cursor-pointer ${variants[variant]} ${className}`;
 
   const content = (
     <>
       {children}
-      {showArrow && <ArrowRight size={10} />}
+      {showArrow && <ArrowRight size={15} />}
     </>
   );
 
