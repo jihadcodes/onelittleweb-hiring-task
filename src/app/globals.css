@@ -2,7 +2,6 @@
 
 @theme {
   --font-sans: var(--font-dm-sans);
-  --font-manrope: var(--font-manrope);
-  --font-jakarta: var(--font-jakarta);
+  --font-manrope: var(--font-manrope-font);
+  --font-jakarta: var(--font-jakarta-font);
 }
-
