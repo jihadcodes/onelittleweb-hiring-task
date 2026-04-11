@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
   --font-sans: var(--font-dm-sans);
   --font-manrope: var(--font-manrope-font);

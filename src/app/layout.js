@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
