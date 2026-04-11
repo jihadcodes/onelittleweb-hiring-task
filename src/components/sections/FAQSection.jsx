@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import SectionHeader from '../ui/SectionHeader'
+import { PlusCircle, MinusCircle } from "lucide-react";
 
 const faqData = [
   {
@@ -43,15 +43,15 @@ const FAQ = () => {
   }
 
   return (
-    <section className=" pb-4.75 ">
-      <div className="max-w-310 bg-[#F9FAFB] mx-auto rounded-2xl py-18.5 ">
+    <section className="pb-4.75">
+      <div className="max-w-310 bg-[#F9FAFB] mx-auto rounded-2xl py-18.5">
 
         <div className="text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl font-semibold  text-[#101828] mb-5 -tracking-[2%]">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#101828] mb-5 -tracking-[2%]">
             Frequently asked{" "}
             <span className="text-[#ED3C6A]">questions</span>
           </h2>
-          <p className="text-[#000000] text-[20px] leading-7.5 ">
+          <p className="text-[#000000] text-[20px] leading-7.5">
             Everything you need to know about the product and billing.
           </p>
         </div>
@@ -61,25 +61,26 @@ const FAQ = () => {
           {faqData.map((faq, index) => (
             <div
               key={faq.id}
-              className={index !== 0 ? "mt-[25px] border-t border-[rgba(191,33,75,0.25)]  " : ""}
+              className={index !== 0 ? "mt-[25px] border-t border-[rgba(191,33,75,0.25)]" : ""}
             >
               {/* Question row */}
               <button
                 onClick={() => handleToggle(faq.id)}
-                className="w-full flex items-center justify-between text-left gap-4 pt-[25px]"
+                className={`w-full flex items-center justify-between text-left gap-4 cursor-pointer ${index !== 0 ? "pt-[25px]" : ""}`}
               >
-                <span className="text-[#000000] font-bold  text-[18px] leading-7 ">
+                <span className="text-[#000000] font-bold text-[18px] leading-7">
                   {faq.question}
                 </span>
 
-                <span className="shrink-0 w-5 h-5 rounded-full border-2 border-[#ED3C6A] text-[#ED3C6A] flex items-center justify-center text-xl font-light">
-                  {openId === faq.id ? "−" : "+"}
-                </span>
+                {openId === faq.id ?
+                  <MinusCircle size={24} className="text-[#ED3C6A] shrink-0" /> :
+                  <PlusCircle size={24} className="text-[#ED3C6A] shrink-0" />
+                }
               </button>
 
               {/* Answer */}
               {openId === faq.id && (
-                <p className="text-[#606060] text-base leading-6 mt-2 font-normal ">
+                <p className="text-[#606060] text-base leading-6 mt-2 font-normal">
                   {faq.answer}
                 </p>
               )}
