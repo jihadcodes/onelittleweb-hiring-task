@@ -25,8 +25,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='pt-10 border-t border-[#D6D6D6]'>
-      <div className="flex flex-col xl:flex-row max-w-[1185px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 my-10 xl:my-22.5 gap-10 xl:gap-39.75">
+    <footer className=' border-t border-[#D6D6D6]'>
+      <div className="flex flex-col xl:flex-row max-w-[1185px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-0   gap-10 xl:gap-39.75 xl:py-22.5">
         
         {/* Logo + Description + Social */}
         <div className='w-full xl:max-w-[396px]'>
