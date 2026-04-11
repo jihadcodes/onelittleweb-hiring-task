@@ -79,11 +79,15 @@ const FAQ = () => {
               </button>
 
               {/* Answer */}
-              {openId === faq.id && (
-                <p className="text-[#606060] text-base leading-6 mt-2 font-normal">
-                  {faq.answer}
-                </p>
-              )}
+              <div
+                className={`grid transition-all duration-400 ease-in-out ${openId === faq.id ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+              >
+                <div className="overflow-hidden">
+                 <p className="text-[#606060] text-base leading-6 mt-2 font-normal">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
