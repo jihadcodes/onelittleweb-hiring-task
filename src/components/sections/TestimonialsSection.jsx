@@ -4,26 +4,22 @@ import Autoplay from 'embla-carousel-autoplay'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 
-// Testimonial data
 const testimonials = [
-  { id: 1, name: "Jenny Wilson", image: "/images/jenny.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 2, name: "Esther Howard", image: "/images/esther.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 3, name: "Robert Fox", image: "/images/robert.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 4, name: "John Doe", image: "/images/john.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 5, name: "Sarah Lee", image: "/images/sarah.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 1, name: "Jenny Wilson", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 2, name: "Esther Howard", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 3, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 4, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 5, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
 ]
 
 const TestimonialsSection = () => {
-  // Initialize Embla carousel with loop, center alignment and autoplay every 3s
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "center" },
+    { loop: true, align: "center", startIndex: 1 },
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
   )
 
-  // Track the currently active slide index
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(1)
 
-  // Update selectedIndex whenever the active slide changes
   const onSelect = useCallback(() => {
     if (!emblaApi) return
     setSelectedIndex(emblaApi.selectedScrollSnap())
@@ -36,53 +32,57 @@ const TestimonialsSection = () => {
   }, [emblaApi, onSelect])
 
   return (
-     <>
-         <section className="mb-45">
-      {/* Embla viewport — overflow hidden clips side cards partially */}
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-6">
-          {testimonials.map((t, index) => (
-            // Each slide: responsive width so 3 cards are visible at once
-            <div
-              key={t.id}
-              className="flex-none w-[60%] sm:w-[45%] lg:w-[36%]"
-            >
-              {/* Active card gets full opacity and normal scale; inactive cards are dimmed and scaled down */}
-              <div className={`bg-white rounded-2xl p-6 border transition-all duration-300 ${
-                index === selectedIndex
-                  ? "shadow-[0px_4px_77.4px_0px_rgba(136,136,136,0.41)] border-none opacity-100 scale-100"
-                  : "shadow-sm border-none opacity-50 scale-95"
-              }`}>
-                {/* Reviewer info */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      width={56}
-                      height={56}
-                      className="object-cover w-full h-full"
-                    />
+    <>
+      <section className="mb-45">
+        <div className="text-center mb-20 max-w-[713px] mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#101828] mb-5 -tracking-[2%]">
+            Check Our Clients{" "}
+            <span className="text-[#ED3C6A]">Review</span>
+          </h2>
+          <p className="text-[#000000] text-sm font-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6">
+            {testimonials.map((t, index) => (
+              <div
+                key={t.id}
+                className="flex-none w-[60%] sm:w-[45%] lg:w-[36%]"
+              >
+                <div className={`rounded-2xl pt-11.5 pb-11 pl-9.25 pr-10.5 transition-all duration-300 ${
+                  index === selectedIndex
+                    ? "bg-white shadow-[0px_4px_77px_0px_rgba(0,0,0,0.08)] opacity-100 scale-100"
+                    : "bg-[#F6F6F6] opacity-50 scale-95"
+                }`}>
+                  <div className="flex items-center gap-7.5">
+                    <div className="w-[100px] h-[100px] rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src={t.image}
+                        alt={t.name}
+                        width={100}
+                        height={100}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#101828] text-lg mb-2">{t.name}</h4>
+                      <p className="text-[#606060] text-sm leading-6 mb-4">{t.text}</p>
+                      <div className="flex gap-1">
+                        {Array.from({ length: t.stars }).map((_, i) => (
+                          <span key={i} className="text-[#F4C430] text-base">★</span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <h4 className="font-bold text-[#101828] text-lg">{t.name}</h4>
-                </div>
-
-                {/* Review text */}
-                <p className="text-[#606060] text-sm leading-6 mb-4">{t.text}</p>
-
-                {/* Star rating */}
-                <div className="flex gap-1">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <span key={i} className="text-[#F4C430] text-base">★</span>
-                  ))}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-     </>
+      </section>
+    </>
   )
 }
 
