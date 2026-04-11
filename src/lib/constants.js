@@ -94,32 +94,41 @@ export const PRICING_PLANS = [
   },
 ];
 
-export const FAQS = [
+
+// FAQ data for the FAQ section
+const faqData = [
   {
+    id: 1,
     question: "Is there a free trial available?",
     answer: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
   },
   {
+    id: 2,
     question: "Can I change my plan later?",
-    answer: "Yes, you can upgrade or downgrade your plan at any time from your account settings page.",
+    answer: "Yes, you can upgrade or downgrade your plan at any time from your account settings.",
   },
   {
+    id: 3,
     question: "What is your cancellation policy?",
-    answer: "You can cancel your subscription at any time. You will continue to have access until the end of your current billing period.",
+    answer: "You can cancel your subscription at any time. You won't be charged after cancellation.",
   },
   {
+    id: 4,
     question: "Can other info be added to an invoice?",
-    answer: "Yes, you can add your company details, VAT number, and other billing information to your invoices.",
+    answer: "Yes, you can add additional information such as your company name, VAT number, and address to your invoices.",
   },
   {
+    id: 5,
     question: "How does billing work?",
-    answer: "We bill on a monthly or yearly basis depending on your selected plan. Payments are processed securely.",
+    answer: "We bill monthly or annually depending on your chosen plan. All payments are processed securely.",
   },
   {
+    id: 6,
     question: "How do I change my account email?",
-    answer: "You can change your account email from your profile settings page. A verification email will be sent to confirm.",
+    answer: "You can change your account email from the profile settings page inside your dashboard.",
   },
-];
+]
+
 
 export const FOOTER_LINKS = {
   Company:   ["About", "Features", "Works", "Career"],

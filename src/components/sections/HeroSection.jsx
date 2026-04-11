@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center overflow-hidden mt-22.25"
+      className="relative flex items-center justify-center overflow-hidden mt-22.25 mb-12.5 "
       style={{
         backgroundImage: `
           linear-gradient(#e5e7eb 1px, transparent 1px),
