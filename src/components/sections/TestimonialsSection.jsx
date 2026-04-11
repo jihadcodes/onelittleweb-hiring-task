@@ -5,9 +5,13 @@ import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const testimonials = [
-  { id: 1, name: "Jenny Wilson", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 1, 
+  name: "Esther Howard", 
+  image: "/images/Testimonials/Ellipse 21.png", 
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
+  stars: 4 },
   { id: 2, name: "Esther Howard", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 3, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
+  { id: 3, name: "Esther Howard", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
   { id: 4, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
   { id: 5, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
 ]
@@ -49,7 +53,7 @@ const TestimonialsSection = () => {
             {testimonials.map((t, index) => (
               <div
                 key={t.id}
-                className="flex-none w-[60%] sm:w-[45%] lg:w-[36%]"
+                className="flex-none w-[530px]"
               >
                 <div className={`rounded-2xl pt-11.5 pb-11 pl-9.25 pr-10.5 transition-all duration-300 ${
                   index === selectedIndex
@@ -67,9 +71,9 @@ const TestimonialsSection = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#101828] text-lg mb-2">{t.name}</h4>
-                      <p className="text-[#606060] text-sm leading-6 mb-4">{t.text}</p>
-                      <div className="flex gap-1">
+                      <h4 className="font-bold text-[#000000] text-xl mb-1.25">{t.name}</h4>
+                      <p className="text-[#000000] text-sm font-medium  mb-3 leading-auto ">{t.text}</p>
+                      <div className="flex gap-0.75">
                         {Array.from({ length: t.stars }).map((_, i) => (
                           <span key={i} className="text-[#F4C430] text-base">★</span>
                         ))}
