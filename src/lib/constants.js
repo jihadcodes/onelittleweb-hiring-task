@@ -7,6 +7,49 @@ export const NAV_LINKS = [
   { label: "Resources", href: "#resources" },
 ];
 
+// Hero Section
+export const HERO_DESIGN_WIDTH = 1440;
+export const HERO_DESIGN_HEIGHT = 584;
+
+export const HERO_FLOATING_IMAGES = [
+  {
+    src: "/images/Hero/image1.png",
+    alt: "Airbnb",
+    width: "7%",
+    left: "18%",
+    top: "32%",
+    rotate: "-4.84deg",
+    animationClass: "animate-hero-float-1",
+  },
+  {
+    src: "/images/Hero/image3.png",
+    alt: "Booking",
+    width: "4.5%",
+    left: "74.5%",
+    top: "35%",
+    rotate: "27.61deg",
+    animationClass: "animate-hero-float-2",
+  },
+  {
+    src: "/images/Hero/image2.png",
+    alt: "App 2",
+    width: "5.2%",
+    left: "21%",
+    top: "75%",
+    rotate: "0deg",
+    animationClass: "animate-hero-float-3",
+  },
+  {
+    src: "/images/Hero/image4.png",
+    alt: "App 4",
+    width: "6.2%",
+    left: "70%",
+    top: "75%",
+    rotate: "-7.38deg",
+    animationClass: "animate-hero-float-4",
+  },
+];
+
 export const SERVICES = [
   {
     icon: "/images/Service/service1.png",

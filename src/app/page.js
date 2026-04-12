@@ -3,14 +3,16 @@ import GettingStartedSection from '@/components/sections/GettingStartedSection'
 import HeroSection from '@/components/sections/HeroSection'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import ToolsSection from '@/components/sections/ToolsSection'
+import TrustedBy from '@/components/sections/TrustedBy'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
       <HeroSection/>
+      <TrustedBy/>
       <ToolsSection/>
-      {/* <TestimonialsSection/> */}
+      <TestimonialsSection/>
       <FAQ/>
       <GettingStartedSection/>
     </div>
