@@ -299,3 +299,23 @@ export const WHY_CHOOSE_US = {
     "We have expart in our team",
   ],
 };
+
+
+// ─────────────────────────────────────────
+// FOOTER SECTION
+// ─────────────────────────────────────────
+
+  export const footerLinks = [
+    {
+      title: "Company",
+      links: ["About", "Features", "Works", "Career"],
+    },
+    {
+      title: "Help",
+      links: ["Customer Support", "Delivery Details", "Terms & Conditions", "Privacy Policy"],
+    },
+    {
+      title: "Resources",
+      links: ["Free eBooks", "Development Tutorial", "How to – Blog", "Youtube Playlist"],
+    },
+  ];
