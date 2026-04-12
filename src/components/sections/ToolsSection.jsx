@@ -2,66 +2,66 @@ import React from 'react'
 import AppImage from "@/components/ui/AppImage";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const ToolsSection = () => {
-
- const TOOLS = [
+const partnerTools = [
   {
-    name: "PriceLabs",
-    src: "/images/ToolsImg/tool1.png",
-    iconWidth: 174,
-    iconHeight: 46,
+    label: "PriceLabs",
+    imagePath: "/images/ToolsImg/tool1.png",
+    width: 174,
+    height: 46,
   },
   {
-    name: "Wheelhouse",
-    src: "/images/ToolsImg/tool2.png",
-    iconWidth: 210,
-    iconHeight: 27,
+    label: "Wheelhouse",
+    imagePath: "/images/ToolsImg/tool2.png",
+    width: 210,
+    height: 27,
   },
   {
-    name: "Beyond Pricing",
-    src: "/images/ToolsImg/tool3.png",
-    iconWidth: 193,
-    iconHeight: 31,
+    label: "Beyond Pricing",
+    imagePath: "/images/ToolsImg/tool3.png",
+    width: 193,
+    height: 31,
   },
   {
-    name: "Hostfully",
-    src: "/images/ToolsImg/tool4.png",
-    iconWidth: 151,
-    iconHeight: 56,
+    label: "Hostfully",
+    imagePath: "/images/ToolsImg/tool4.png",
+    width: 151,
+    height: 56,
   },
   {
-    name: "Guesty",
-    src: "/images/ToolsImg/tool5.png",
-    iconWidth: 135,
-    iconHeight: 55,
+    label: "Guesty",
+    imagePath: "/images/ToolsImg/tool5.png",
+    width: 135,
+    height: 55,
   },
   {
-    name: "Lodgify",
-    src: "/images/ToolsImg/tool6.png",
-    iconWidth: 193,
-    iconHeight: 31,
+    label: "Lodgify",
+    imagePath: "/images/ToolsImg/tool6.png",
+    width: 193,
+    height: 31,
   },
   {
-    name: "Tool 7",
-    src: "/images/ToolsImg/tool4.png",
-    iconWidth: 151,
-    iconHeight: 56,
+    label: "Tool 7",
+    imagePath: "/images/ToolsImg/tool4.png",
+    width: 151,
+    height: 56,
   },
   {
-    name: "Tool 8",
-    src: "/images/ToolsImg/tool5.png",
-    iconWidth: 135,
-    iconHeight: 55,
+    label: "Tool 8",
+    imagePath: "/images/ToolsImg/tool5.png",
+    width: 135,
+    height: 55,
   },
   {
-    name: "Tool 9",
-    src: "/images/ToolsImg/tool6.png",
-    iconWidth: 193,
-    iconHeight: 31,
+    label: "Tool 9",
+    imagePath: "/images/ToolsImg/tool6.png",
+    width: 193,
+    height: 31,
   },
 ];
+
+export default function ToolsSection() {
   return (
-   <section id="tools" className="pt-10 lg:pt-21 bg-white">
+    <section id="tools" className="pt-10 lg:pt-21 bg-white">
       <div className="max-w-240 mx-auto pb-5 lg:pb-20.5 px-6">
         <SectionHeader
           title="Our"
@@ -70,20 +70,20 @@ const ToolsSection = () => {
         />
       </div>
 
-      {/* Full width background */}
+      {/* Full-width gray backdrop */}
       <div className="bg-[#F6F6F6] w-full pt-9.5 pb-21.25">
         <div className="max-w-240 mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {TOOLS.map((tool) => (
+            {partnerTools.map((item) => (
               <div
-                key={tool.name}
-                className="bg-white rounded-[11px] flex items-center justify-center p-6 md:py-11.75 md:pl-11 md:pr-17.5 shadow-sm hover:shadow-md transition-shadow duration-200 aspect-[3/2]"
+                key={item.label}
+                className="bg-white rounded-[11px] flex items-center justify-center p-6 md:py-11.75 md:pl-11 md:pr-17.5 aspect-[3/2] hover:shadow-[0px_4px_30.3px_0px_rgba(255,138,168,0.28)] transition-shadow duration-200"
               >
                 <AppImage
-                  src={tool.src}
-                  alt={tool.name}
-                  width={tool.iconWidth}
-                  height={tool.iconHeight}
+                  src={item.imagePath}
+                  alt={item.label}
+                  width={item.width}
+                  height={item.height}
                   className="object-contain"
                 />
               </div>
@@ -94,5 +94,3 @@ const ToolsSection = () => {
     </section>
   )
 }
-
-export default ToolsSection
