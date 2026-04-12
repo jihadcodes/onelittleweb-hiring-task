@@ -1,7 +1,7 @@
 import Link from "next/link";
 import AppImage from "@/components/ui/AppImage";
 import SectionHeader from "@/components/ui/SectionHeader";
-import { SERVICES } from "@/lib/constants";
+import { SERVICES } from "@/lib/data";
 
 export default function ServicesSection() {
   return (

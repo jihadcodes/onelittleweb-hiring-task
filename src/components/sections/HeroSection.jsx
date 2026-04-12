@@ -5,7 +5,7 @@ import {
   HERO_DESIGN_WIDTH,
   HERO_DESIGN_HEIGHT,
   HERO_FLOATING_IMAGES,
-} from "@/lib/constants";
+} from "@/lib/data";
 
 export default function Hero() {
   return (

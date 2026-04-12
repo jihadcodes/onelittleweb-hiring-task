@@ -2,63 +2,8 @@ import React from 'react'
 import AppImage from "@/components/ui/AppImage";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const partnerTools = [
-  {
-    label: "PriceLabs",
-    imagePath: "/images/ToolsImg/tool1.png",
-    width: 174,
-    height: 46,
-  },
-  {
-    label: "Wheelhouse",
-    imagePath: "/images/ToolsImg/tool2.png",
-    width: 210,
-    height: 27,
-  },
-  {
-    label: "Beyond Pricing",
-    imagePath: "/images/ToolsImg/tool3.png",
-    width: 193,
-    height: 31,
-  },
-  {
-    label: "Hostfully",
-    imagePath: "/images/ToolsImg/tool4.png",
-    width: 151,
-    height: 56,
-  },
-  {
-    label: "Guesty",
-    imagePath: "/images/ToolsImg/tool5.png",
-    width: 135,
-    height: 55,
-  },
-  {
-    label: "Lodgify",
-    imagePath: "/images/ToolsImg/tool6.png",
-    width: 193,
-    height: 31,
-  },
-  {
-    label: "Tool 7",
-    imagePath: "/images/ToolsImg/tool4.png",
-    width: 151,
-    height: 56,
-  },
-  {
-    label: "Tool 8",
-    imagePath: "/images/ToolsImg/tool5.png",
-    width: 135,
-    height: 55,
-  },
-  {
-    label: "Tool 9",
-    imagePath: "/images/ToolsImg/tool6.png",
-    width: 193,
-    height: 31,
-  },
-];
-
+import { partnerTools } from "@/lib/data";
+ 
 export default function ToolsSection() {
   return (
     <section id="tools" className="pt-10 lg:pt-21 bg-white">

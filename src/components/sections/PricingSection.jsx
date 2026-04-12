@@ -3,60 +3,8 @@
 import { useState } from "react";
 import { Check, X } from "lucide-react";
 import AppImage from "../ui/AppImage";
+import { billingPlans } from "@/lib/data";
 
-const billingPlans = [
-  {
-    id: 1,
-    planName: "Freebie",
-    tagline: "Ideal for individuals who need quick access to basic features.",
-    cost: { monthly: 0, annually: 0 },
-    featured: false,
-    capabilities: [
-      { feature: "20,000+ of PNG & SVG graphics", available: true },
-      { feature: "Access to 100 million stock images", available: true },
-      { feature: "Upload custom icons and fonts", available: false },
-      { feature: "Unlimited Sharing", available: false },
-      { feature: "Upload graphics & video in up to 4k", available: false },
-      { feature: "Unlimited Projects", available: false },
-      { feature: "Instant Access to our design system", available: false },
-      { feature: "Create teams to collaborate on designs", available: false },
-    ],
-  },
-  {
-    id: 2,
-    planName: "Professional",
-    tagline: "Ideal for individuals who need advanced features and tools for client work.",
-    cost: { monthly: 25, annually: 19 },
-    featured: true,
-    capabilities: [
-      { feature: "20,000+ of PNG & SVG graphics", available: true },
-      { feature: "Access to 100 million stock images", available: true },
-      { feature: "Upload custom icons and fonts", available: true },
-      { feature: "Unlimited Sharing", available: true },
-      { feature: "Upload graphics & video in up to 4k", available: true },
-      { feature: "Unlimited Projects", available: true },
-      { feature: "Instant Access to our design system", available: false },
-      { feature: "Create teams to collaborate on designs", available: false },
-    ],
-  },
-  {
-    id: 3,
-    planName: "Enterprise",
-    tagline: "Ideal for businesses who need personalized services and security for large teams.",
-    cost: { monthly: 100, annually: 75 },
-    featured: false,
-    capabilities: [
-      { feature: "20,000+ of PNG & SVG graphics", available: true },
-      { feature: "Access to 100 million stock images", available: true },
-      { feature: "Upload custom icons and fonts", available: true },
-      { feature: "Unlimited Sharing", available: true },
-      { feature: "Upload graphics & video in up to 4k", available: true },
-      { feature: "Unlimited Projects", available: true },
-      { feature: "Instant Access to our design system", available: true },
-      { feature: "Create teams to collaborate on designs", available: true },
-    ],
-  },
-];
 
 export default function PricingSection() {
   const [annualBilling, setAnnualBilling] = useState(false);

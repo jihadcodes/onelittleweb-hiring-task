@@ -1,15 +1,8 @@
 "use client"
 import Image from "next/image";
+import { LOGOS } from "@/lib/data";
 
-const LOGOS = [
-  { name: "Partner 1", src: "/images/TrustedBy/partnar1.png" },
-  { name: "Partner 2", src: "/images/TrustedBy/partnar2.png" },
-  { name: "Partner 3", src: "/images/TrustedBy/partnar3.png" },
-  { name: "Partner 4", src: "/images/TrustedBy/partnar4.png" },
-  { name: "Partner 5", src: "/images/TrustedBy/partnar5.png" },
-  { name: "Partner 6", src: "/images/TrustedBy/partnar6.png" },
-  { name: "Partner 7", src: "/images/TrustedBy/partnar7.png" },
-];
+
 
 // Duplicate logos to create seamless infinite scroll effect
 const scrollingLogos = [...LOGOS, ...LOGOS, ...LOGOS];

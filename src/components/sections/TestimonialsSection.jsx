@@ -3,20 +3,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
+import { testimonials } from "@/lib/data";
 
-const testimonials = [
-  { id: 1, 
-  name: "Esther Howard", 
-  image: "/images/Testimonials/Ellipse 21.png", 
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-  stars: 4 },
-  { id: 2, name: "Esther Howard", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 3, name: "Esther Howard", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 4, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21 (1).png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-  { id: 5, name: "Robert Fox", image: "/images/Testimonials/Ellipse 21.png", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", stars: 4 },
-]
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ()  => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center", startIndex: 1 },
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
