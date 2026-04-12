@@ -1,6 +1,7 @@
 import FAQ from '@/components/sections/FAQSection'
 import GettingStartedSection from '@/components/sections/GettingStartedSection'
 import HeroSection from '@/components/sections/HeroSection'
+import ServicesSection from '@/components/sections/ServicesSection'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import ToolsSection from '@/components/sections/ToolsSection'
 import TrustedBy from '@/components/sections/TrustedBy'
@@ -11,6 +12,7 @@ export default function page() {
     <div>
       <HeroSection/>
       <TrustedBy/>
+      <ServicesSection/>
       <ToolsSection/>
       <TestimonialsSection/>
       <FAQ/>

@@ -16,8 +16,8 @@ const scrollingLogos = [...LOGOS, ...LOGOS, ...LOGOS];
 
 export default function TrustedBy() {
   return (
-    <section className="pt-12.5 pb-13.75 border-y border-gray-100 overflow-hidden">
-      <p className="text-center text-[#000000] font-semibold leading-[100%] text-[20px] mb-6">
+    <section className="mt-12.75 mb-13.75 overflow-hidden">
+      <p className="text-center text-[#000000] font-semibold leading-[100%] text-[20px] mb-9">
         Trusted by leaders in 50+ industries
       </p>
 
