@@ -1,5 +1,5 @@
 "use client"
-import NextImage from "next/image";
+import Image from "next/image";
 
 const LOGOS = [
   { name: "Partner 1", src: "/images/TrustedBy/partnar1.png" },
@@ -11,7 +11,8 @@ const LOGOS = [
   { name: "Partner 7", src: "/images/TrustedBy/partnar7.png" },
 ];
 
-const doubled = [...LOGOS, ...LOGOS];
+// Duplicate logos to create seamless infinite scroll effect
+const scrollingLogos = [...LOGOS, ...LOGOS, ...LOGOS];
 
 export default function TrustedBy() {
   return (
@@ -20,11 +21,17 @@ export default function TrustedBy() {
         Trusted by leaders in 50+ industries
       </p>
 
+      {/* Marquee track — clips overflow so only visible logos show */}
       <div className="relative overflow-hidden bg-[#F6F6F6] py-4.5">
+
+        {/* Scrolling row — w-max keeps all logos in a single line */}
         <div className="flex animate-marquee gap-16 items-center w-max">
-          {doubled.map((logo, i) => (
-            <div key={`${logo.name}-${i}`} className="flex items-center justify-center min-w-30">
-              <NextImage
+          {scrollingLogos.map((logo, i) => (
+            <div
+              key={`${logo.name}-${i}`}
+              className="flex items-center justify-center min-w-30"
+            >
+              <Image
                 src={logo.src}
                 alt={logo.name}
                 width={120}
