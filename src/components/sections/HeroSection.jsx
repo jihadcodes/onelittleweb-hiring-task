@@ -13,7 +13,7 @@ export default function Hero() {
       className="relative w-full overflow-hidden min-h-[500px]"
       style={{ aspectRatio: `${HERO_DESIGN_WIDTH} / ${HERO_DESIGN_HEIGHT}` }}
     >
-      {/* hero.png — full background */}
+      {/* Full-width background image */}
       <div className="absolute inset-0 pointer-events-none">
         <AppImage
           src="/images/Hero/hero.png"
@@ -26,11 +26,11 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating platform icons */}
+      {/* Floating brand icons — desktop only */}
       {HERO_FLOATING_IMAGES.map((img) => (
         <div
           key={img.alt}
-          className={`absolute z-20 hidden lg:block aspect-square ${img.animationClass}`}
+          className="absolute z-20 hidden lg:block aspect-square"
           style={{
             width: img.width,
             left: img.left,
@@ -42,9 +42,10 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Center zone */}
+      {/* Center content zone */}
       <div className="absolute inset-0 z-10 flex items-center justify-center pt-16 md:pt-[160px]">
-        {/* hero_mid.png — oval glow behind text */}
+
+        {/* Oval glow/gradient behind the text */}
         <div
           className="absolute pointer-events-none w-[90%] max-w-[923px]"
           style={{ aspectRatio: "923 / 500" }}
@@ -58,8 +59,10 @@ export default function Hero() {
           />
         </div>
 
-        {/* Text & buttons */}
+        {/* Heading, subtext and CTA buttons */}
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[923px]">
+
+          {/* Main heading */}
           <h1 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-black">
             Airbnb Assistants For
             <br />
@@ -68,6 +71,7 @@ export default function Hero() {
             </span>
           </h1>
 
+          {/* Supporting description */}
           <p className="max-w-166.25 text-[14px] text-black font-medium mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -75,6 +79,7 @@ export default function Hero() {
             aliquip ex ea commodo consequat.
           </p>
 
+          {/* CTA buttons */}
           <div className="flex flex-col items-center gap-3">
             <Button href="/schedule" variant="primary" showArrow>
               Schedule A Meeting
@@ -86,8 +91,10 @@ export default function Hero() {
               See Pricing
             </Link>
           </div>
+
         </div>
       </div>
+
     </section>
   );
 }
