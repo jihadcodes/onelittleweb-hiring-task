@@ -60,9 +60,10 @@ export default function Hero() {
         </div>
 
         {/* Heading, subtext and CTA buttons */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[923px]">
+        <div className="relative z-10 flex flex-col  mt-13 items-center text-center px-4 w-full max-w-230.75">
 
           {/* Main heading */}
+
           <h1 className="text-[28px] md:text-[36px] lg:text-[48px] font-bold text-black">
             Airbnb Assistants For
             <br />

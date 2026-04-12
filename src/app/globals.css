@@ -6,17 +6,9 @@
   --font-jakarta: var(--font-jakarta-font);
 }
 
-/* Slow rotation for circular elements */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 50s linear infinite;
-}
-
-/* Trusted by — horizontal logo scroll */
+/* ─────────────────────────────────────────
+   Trusted By — horizontal logo marquee scroll
+───────────────────────────────────────── */
 @keyframes scroll-x {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -26,37 +18,22 @@
   animation: scroll-x 28s linear infinite;
 }
 
-/* Hero floating images */
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0px) rotate(var(--rotate)); }
-  50%       { transform: translateY(-12px) rotate(var(--rotate)); }
-}
-
-.animate-hero-float   { animation: heroFloat 3s ease-in-out infinite; }
-.animate-hero-float-1 { animation: heroFloat 3s ease-in-out infinite 0s; }
-.animate-hero-float-2 { animation: heroFloat 3s ease-in-out infinite 0.75s; }
-.animate-hero-float-3 { animation: heroFloat 3s ease-in-out infinite 1.5s; }
-.animate-hero-float-4 { animation: heroFloat 3s ease-in-out infinite 2.25s; }
-
-/* WhyChooseUs — gentle float */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-10px); }
-}
-
-.animate-float          { animation: float 3s ease-in-out infinite; }
-.animate-float-delay    { animation: float 3s ease-in-out infinite 1s; }
-.animate-float-delay-2  { animation: float 3s ease-in-out infinite 2s; }
-
+/* ─────────────────────────────────────────
+   Global base font
+───────────────────────────────────────── */
 body {
   font-family: var(--font-dm-sans);
 }
 
+/* ─────────────────────────────────────────
+   Custom font utility classes
+───────────────────────────────────────── */
 @layer utilities {
   .font-manrope {
     font-family: var(--font-manrope);
   }
-  .font-poppins {
-    font-family: var(--font-poppins);
+  .font-jakarta {
+    font-family: var(--font-jakarta);
   }
 }
+

@@ -12,10 +12,10 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-[#D6D6D6]">
-      <div className="flex flex-col xl:flex-row max-w-[1185px] mx-auto px-6 sm:px-8 xl:px-0 py-10 xl:py-22.5 gap-10 xl:gap-39.75">
+      <div className="flex flex-col xl:flex-row max-w-296.25mx-auto px-6 sm:px-8 xl:px-0 py-10 xl:py-22.5 gap-10 xl:gap-39.75">
 
         {/* Logo + Description + Social */}
-        <div className="w-full xl:max-w-[396px]">
+        <div className="w-full xl:max-w-99">
           <Link href="/">
             <Image
               src="/images/Nav_logo/google.png"

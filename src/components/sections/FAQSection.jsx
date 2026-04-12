@@ -30,7 +30,7 @@ const FAQ = () => {
           {faqData.map((faq, index) => (
             <div
               key={faq.id}
-              className={index !== 0 ? "mt-[25px] border-t border-[rgba(191,33,75,0.25)]" : ""}
+              className={index !== 0 ? "mt-6.25 border-t border-[rgba(191,33,75,0.25)]" : ""}
             >
               {/* Question row */}
               <button
