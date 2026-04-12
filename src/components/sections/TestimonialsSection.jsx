@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
                 <div className={`rounded-2xl pt-11.5 pb-11 pl-9.25 pr-10.5 transition-all duration-300 ${
                   index === selectedIndex
                     ? "bg-white shadow-[0px_4px_77px_0px_rgba(0,0,0,0.08)] opacity-100 scale-100"
-                    : "bg-[#F6F6F6] opacity-50 scale-95"
+                    : "bg-[#F6F6F6] opacity-100 scale-95"
                 }`}>
                   <div className="flex items-center gap-7.5">
                     <div className="w-[100px] h-[100px] rounded-full overflow-hidden flex-shrink-0">
