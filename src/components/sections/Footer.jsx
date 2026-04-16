@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import {footerLinks} from "@/lib/data";
+import { footerLinks } from "@/lib/data";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -9,13 +9,12 @@ import { FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 
 const Footer = () => {
-
   return (
     <footer className="border-t border-[#D6D6D6]">
-      <div className="flex flex-col xl:flex-row max-w-296.25mx-auto px-6 sm:px-8 xl:px-0 py-10 xl:py-22.5 gap-10 xl:gap-39.75">
+      <div className="flex flex-col xl:flex-row max-w-[1190px] mx-auto px-6 sm:px-8 xl:px-0 py-10 xl:py-[90px] gap-10 xl:gap-[159px]">
 
         {/* Logo + Description + Social */}
-        <div className="w-full xl:max-w-99">
+        <div className="w-full xl:max-w-[396px] xl:shrink-0">
           <Link href="/">
             <Image
               src="/images/Nav_logo/google.png"
@@ -51,7 +50,7 @@ const Footer = () => {
 
         {/* Footer links */}
         <div className="w-full">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 xl:gap-33">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 xl:gap-[132px]">
             {footerLinks.map((column) => (
               <div key={column.title}>
                 <h4 className="text-[#18181B] font-bold text-base leading-10 mb-3">
