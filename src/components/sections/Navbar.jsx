@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 [box-shadow:0_4px_62px_0px_#FAC4D2A1]">
-      <nav className="max-w-310.25 mx-auto px-6 flex items-center justify-between h-22.25">
+      <nav className="max-w-310.25 mx-auto px-6 flex items-center justify-between h-16 lg:h-22.25 ">
         {/* Logo */}
         <Link href="/">
           <Image src="/images/Nav_logo/google.png" alt="Google" width={125} height={45} priority />
